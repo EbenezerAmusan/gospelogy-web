@@ -39,9 +39,14 @@ export default function Home() {
             transition={{ duration: 0.8 }}
             className="max-w-3xl"
           >
-            <span className="inline-block py-1 px-3 rounded-full bg-secondary/20 text-secondary border border-secondary/30 text-sm font-bold tracking-wider mb-6 backdrop-blur-sm">
-              WELCOME TO EDEN
-            </span>
+            <motion.span 
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.5, duration: 1 }}
+              className="inline-block text-secondary text-2xl md:text-3xl font-serif italic tracking-wide mb-6 drop-shadow-sm"
+            >
+              Welcome to Eden
+            </motion.span>
             <h1 className="text-5xl md:text-7xl font-bold font-display text-white mb-6 leading-tight drop-shadow-xl">
               Experience God's <br />
               <span className="text-secondary">Unfailing Love</span>
