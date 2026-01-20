@@ -3,6 +3,8 @@ import { useState, useEffect } from "react";
 import { Menu, X, Cross } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
+import logoImg from "@assets/download_1768903937083.jpg";
+
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -28,20 +30,24 @@ export function Navigation() {
   return (
     <nav
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        scrolled ? "bg-white/95 backdrop-blur-md shadow-md py-3" : "bg-transparent py-5"
+        scrolled ? "bg-white shadow-md py-2" : "bg-transparent py-4"
       }`}
     >
       <div className="container-custom flex justify-between items-center">
-        <Link href="/" className="flex items-center space-x-2 group">
-          <div className="bg-primary p-2 rounded-lg text-white group-hover:bg-primary/90 transition-colors">
-            <Cross size={24} />
+        <Link href="/" className="flex items-center space-x-3 group">
+          <div className="relative w-12 h-12 overflow-hidden rounded-lg bg-white p-1 shadow-sm transition-transform group-hover:scale-105">
+            <img 
+              src={logoImg} 
+              alt="God's Family Church Eden Logo" 
+              className="w-full h-full object-contain"
+            />
           </div>
           <div>
-            <span className={`block font-display font-bold text-xl leading-none ${scrolled ? "text-primary" : "text-primary md:text-white"}`}>
-              GFC
+            <span className={`block font-display font-extrabold text-xl leading-none transition-colors ${scrolled ? "text-primary" : "text-primary md:text-white"}`}>
+              GFC EDEN
             </span>
-            <span className={`text-xs font-medium tracking-wider ${scrolled ? "text-gray-600" : "text-gray-600 md:text-white/90"}`}>
-              CHRIST GOSPEL CHURCH
+            <span className={`text-[10px] font-bold tracking-[0.2em] transition-colors ${scrolled ? "text-gray-500" : "text-gray-400 md:text-white/80"}`}>
+              GOD'S FAMILY CHURCH
             </span>
           </div>
         </Link>
