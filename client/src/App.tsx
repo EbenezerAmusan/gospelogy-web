@@ -5,12 +5,22 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/not-found";
 
+import Home from "@/pages/Home";
+import About from "@/pages/About";
+import Sermons from "@/pages/Sermons";
+import Ministries from "@/pages/Ministries";
+import Events from "@/pages/Events";
+import Contact from "@/pages/Contact";
+
 function Router() {
   return (
     <Switch>
-      {/* Add pages below */}
-      {/* <Route path="/" component={Home}/> */}
-      {/* Fallback to 404 */}
+      <Route path="/" component={Home} />
+      <Route path="/about" component={About} />
+      <Route path="/sermons" component={Sermons} />
+      <Route path="/ministries" component={Ministries} />
+      <Route path="/events" component={Events} />
+      <Route path="/contact" component={Contact} />
       <Route component={NotFound} />
     </Switch>
   );
