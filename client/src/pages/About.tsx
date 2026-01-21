@@ -76,7 +76,7 @@ export default function About() {
               </div>
               <h3 className="text-3xl font-display font-bold mb-6 text-gray-900">Our Vision</h3>
               <p className="text-xl text-gray-600 italic leading-relaxed">
-                "To make ready a people prepared for the Lord" 
+                To make ready a people prepared for the Lord
               </p>
               <p className="mt-4 text-primary font-bold">— Luke 1:17</p>
             </div>

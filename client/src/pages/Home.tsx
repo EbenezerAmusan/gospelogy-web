@@ -10,21 +10,36 @@ import { useState, useEffect } from "react";
 
 const TypewriterText = ({ text }: { text: string }) => {
   const [displayText, setDisplayText] = useState("");
+  const [isDeleting, setIsDeleting] = useState(false);
+  const [speed, setSpeed] = useState(100);
   
   useEffect(() => {
-    let i = 0;
-    const timer = setInterval(() => {
-      setDisplayText(text.substring(0, i));
-      i++;
-      if (i > text.length) clearInterval(timer);
-    }, 100);
-    return () => clearInterval(timer);
-  }, [text]);
+    const handleTyping = () => {
+      if (!isDeleting) {
+        setDisplayText(text.substring(0, displayText.length + 1));
+        setSpeed(100);
+        if (displayText.length === text.length) {
+          setIsDeleting(true);
+          setSpeed(2000); // Wait before starting to delete
+        }
+      } else {
+        setDisplayText(text.substring(0, displayText.length - 1));
+        setSpeed(50);
+        if (displayText.length === 0) {
+          setIsDeleting(false);
+          setSpeed(500); // Wait before starting to type again
+        }
+      }
+    };
+
+    const timer = setTimeout(handleTyping, speed);
+    return () => clearTimeout(timer);
+  }, [displayText, isDeleting, speed, text]);
 
   return (
-    <span className="inline-block text-secondary text-2xl md:text-3xl font-serif italic tracking-wide mb-6 drop-shadow-sm">
+    <span className="inline-block text-secondary text-2xl md:text-3xl font-serif italic tracking-wide mb-6 drop-shadow-sm min-h-[1.5em]">
       {displayText}
-      <span className="animate-pulse">|</span>
+      <span className="animate-pulse ml-1 text-white">|</span>
     </span>
   );
 };
