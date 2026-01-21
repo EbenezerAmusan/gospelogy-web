@@ -34,21 +34,13 @@ export function Navigation() {
       }`}
     >
       <div className="container-custom flex justify-between items-center">
-        <Link href="/" className="flex items-center space-x-3 group">
+        <Link href="/" className="flex items-center group">
           <div className="relative w-12 h-12 overflow-hidden rounded-lg bg-white p-1 shadow-sm transition-transform group-hover:scale-105">
             <img 
               src={logoImg} 
               alt="God's Family Church Eden Logo" 
               className="w-full h-full object-contain"
             />
-          </div>
-          <div>
-            <span className={`block font-display font-extrabold text-xl leading-none transition-colors ${scrolled ? "text-primary" : "text-primary md:text-white"}`}>
-              GFC EDEN
-            </span>
-            <span className={`text-[10px] font-bold tracking-[0.2em] transition-colors ${scrolled ? "text-gray-500" : "text-gray-400 md:text-white/80"}`}>
-              GOD'S FAMILY CHURCH
-            </span>
           </div>
         </Link>
 

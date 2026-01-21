@@ -69,18 +69,26 @@ export default function About() {
             <p className="text-gray-600">These principles guide everything we do at Christ Gospel Church.</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white p-8 rounded-2xl shadow-lg border-t-4 border-primary">
-              <h3 className="text-xl font-bold mb-4 text-primary">Faith</h3>
-              <p className="text-gray-600">We believe in the transformative power of the Gospel and stand firmly on the Word of God as our foundation.</p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div className="bg-white p-10 rounded-3xl shadow-xl border border-gray-100 hover:border-primary/20 transition-all group">
+              <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-all">
+                <span className="text-2xl font-bold">V</span>
+              </div>
+              <h3 className="text-3xl font-display font-bold mb-6 text-gray-900">Our Vision</h3>
+              <p className="text-xl text-gray-600 italic leading-relaxed">
+                "To make ready a people prepared for the Lord" 
+              </p>
+              <p className="mt-4 text-primary font-bold">— Luke 1:17</p>
             </div>
-            <div className="bg-white p-8 rounded-2xl shadow-lg border-t-4 border-secondary">
-              <h3 className="text-xl font-bold mb-4 text-primary">Community</h3>
-              <p className="text-gray-600">We are designed for relationship. We foster deep connections where everyone is known, loved, and supported.</p>
-            </div>
-            <div className="bg-white p-8 rounded-2xl shadow-lg border-t-4 border-primary">
-              <h3 className="text-xl font-bold mb-4 text-primary">Service</h3>
-              <p className="text-gray-600">We serve with humility and passion, using our gifts to bless others and make a tangible difference in our city.</p>
+            
+            <div className="bg-white p-10 rounded-3xl shadow-xl border border-gray-100 hover:border-secondary/20 transition-all group">
+              <div className="w-16 h-16 bg-secondary/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-secondary group-hover:text-primary transition-all">
+                <span className="text-2xl font-bold">M</span>
+              </div>
+              <h3 className="text-3xl font-display font-bold mb-6 text-gray-900">Our Mission</h3>
+              <p className="text-xl text-gray-600 leading-relaxed">
+                To impact you with gospelogy for a disciplined lifestyle.
+              </p>
             </div>
           </div>
         </div>

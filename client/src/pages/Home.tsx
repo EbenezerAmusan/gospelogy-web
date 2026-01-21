@@ -6,6 +6,28 @@ import { Link } from "wouter";
 import { motion } from "framer-motion";
 import { Calendar, Clock, ArrowRight, PlayCircle, MapPin } from "lucide-react";
 import { format } from "date-fns";
+import { useState, useEffect } from "react";
+
+const TypewriterText = ({ text }: { text: string }) => {
+  const [displayText, setDisplayText] = useState("");
+  
+  useEffect(() => {
+    let i = 0;
+    const timer = setInterval(() => {
+      setDisplayText(text.substring(0, i));
+      i++;
+      if (i > text.length) clearInterval(timer);
+    }, 100);
+    return () => clearInterval(timer);
+  }, [text]);
+
+  return (
+    <span className="inline-block text-secondary text-2xl md:text-3xl font-serif italic tracking-wide mb-6 drop-shadow-sm">
+      {displayText}
+      <span className="animate-pulse">|</span>
+    </span>
+  );
+};
 
 export default function Home() {
   const { data: events, isLoading: eventsLoading } = useEvents();
@@ -39,14 +61,7 @@ export default function Home() {
             transition={{ duration: 0.8 }}
             className="max-w-3xl"
           >
-            <motion.span 
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.5, duration: 1 }}
-              className="inline-block text-secondary text-2xl md:text-3xl font-serif italic tracking-wide mb-6 drop-shadow-sm"
-            >
-              Welcome to Eden
-            </motion.span>
+            <TypewriterText text="Welcome to Eden" />
             <h1 className="text-5xl md:text-7xl font-bold font-display text-white mb-6 leading-tight drop-shadow-xl">
               Experience God's <br />
               <span className="text-secondary">Unfailing Love</span>
@@ -93,7 +108,12 @@ export default function Home() {
             <div className="bg-gray-50 p-8 rounded-2xl shadow-xl border border-gray-200 transform hover:-translate-y-2 transition-transform duration-300">
               <h3 className="text-2xl font-bold mb-4 text-primary">New Here?</h3>
               <p className="mb-6 text-gray-600">We'd love to meet you! Plan your visit and let us welcome you home.</p>
-              <Link href="/contact" className="inline-flex items-center text-primary font-bold hover:text-secondary transition-colors">
+              <Link href="/contact" onClick={() => {
+                setTimeout(() => {
+                  const element = document.getElementById('map-section');
+                  if (element) element.scrollIntoView({ behavior: 'smooth' });
+                }, 100);
+              }} className="inline-flex items-center text-primary font-bold hover:text-secondary transition-colors">
                 Get Directions <ArrowRight className="ml-2 w-4 h-4" />
               </Link>
             </div>
