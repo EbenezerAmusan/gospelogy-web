@@ -9,11 +9,11 @@ async function seedDatabase() {
   if (existingSermons.length === 0) {
     await storage.createSermon({
       title: "Walking in Faith",
-      preacher: "Pastor John Doe",
+      preacher: "Pastor Perez Apha",
       date: new Date(),
       description: "A powerful message about trusting God in difficult times.",
       series: "Faith Series",
-      videoUrl: "https://www.youtube.com/watch?v=placeholder",
+      videoUrl: "https://www.youtube.com/@GospelogyEden1/featured",
       imageUrl: "https://images.unsplash.com/photo-1438232992991-995b7058bbb3?auto=format&fit=crop&q=80&w=1600"
     });
     await storage.createSermon({
@@ -36,7 +36,7 @@ async function seedDatabase() {
       imageUrl: "https://images.unsplash.com/photo-1544427920-c49ccfb85579?auto=format&fit=crop&q=80&w=1600"
     });
     await storage.createEvent({
-      title: "Youth Night",
+      title: "Bible Study",
       date: new Date(Date.now() + 5 * 24 * 60 * 60 * 1000), // 5 days from now
       location: "Youth Hall",
       description: "A special night for young people to connect.",
@@ -49,14 +49,14 @@ async function seedDatabase() {
     await storage.createMinistry({
       name: "Children's Ministry",
       description: "Nurturing the next generation in the ways of the Lord.",
-      leader: "Sister Mary",
+      leader: "Pastor Calista",
       meetingTime: "Sundays 9:00 AM",
       imageUrl: "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?auto=format&fit=crop&q=80&w=1600"
     });
     await storage.createMinistry({
       name: "Music Ministry",
       description: "Leading the congregation in praise and worship.",
-      leader: "Brother David",
+      leader: "Brother Michael",
       meetingTime: "Thursdays 6:00 PM",
       imageUrl: "https://images.unsplash.com/photo-1516280440614-6697288d5d38?auto=format&fit=crop&q=80&w=1600"
     });

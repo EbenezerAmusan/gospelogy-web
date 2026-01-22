@@ -88,9 +88,9 @@ export default function Home() {
               <Link href="/contact" className="px-8 py-4 bg-secondary text-primary font-bold rounded-full shadow-lg hover:bg-white hover:scale-105 transition-all text-center">
                 Plan a Visit
               </Link>
-              <Link href="/sermons" className="px-8 py-4 bg-white/10 backdrop-blur-md border border-white/30 text-white font-bold rounded-full hover:bg-white/20 transition-all text-center">
+              <a href="https://www.youtube.com/@GospelogyEden1/featured" target="_blank" rel="noopener noreferrer" className="px-8 py-4 bg-white/10 backdrop-blur-md border border-white/30 text-white font-bold rounded-full hover:bg-white/20 transition-all text-center">
                 Watch Sermons
-              </Link>
+              </a>
             </div>
           </motion.div>
         </div>
@@ -117,7 +117,7 @@ export default function Home() {
                 <Calendar className="text-primary" />
                 <span className="font-semibold text-xl text-gray-800">Wednesday</span>
               </div>
-              <p className="text-sm text-gray-500">6:00 PM - Bible Study</p>
+              <p className="text-sm text-gray-500">5:00 PM - Bible Study</p>
             </div>
 
             <div className="bg-gray-50 p-8 rounded-2xl shadow-xl border border-gray-200 transform hover:-translate-y-2 transition-transform duration-300">

@@ -102,9 +102,14 @@ export default function Sermons() {
                       {sermon.description || "Join us for this powerful message as we explore God's word together."}
                     </p>
                     
-                    <button className="text-primary font-bold text-sm uppercase tracking-wide hover:underline">
+                    <a 
+                      href="https://www.youtube.com/@GospelogyEden1/featured" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-primary font-bold text-sm uppercase tracking-wide hover:underline"
+                    >
                       Watch Message
-                    </button>
+                    </a>
                   </div>
                 </motion.div>
               ))}
