@@ -9,7 +9,7 @@ export function Footer() {
           <div className="space-y-4">
             <h3 className="text-2xl font-bold font-display text-white">GFC</h3>
             <p className="text-blue-100 leading-relaxed">
-              A place of worship, community, and spiritual growth. Join us as we journey together in faith at Christ Gospel Church.
+              A place of worship, community, and spiritual growth. Join us as we journey together in faith at God's Family Church.
             </p>
             <div className="flex space-x-4 pt-2">
               <a href="#" className="p-2 bg-white/10 rounded-full hover:bg-white/20 transition-colors">
@@ -43,7 +43,7 @@ export function Footer() {
               </li>
               <li className="flex justify-between">
                 <span>Bible Study (Wed)</span>
-                <span className="font-semibold text-white">6:00 PM</span>
+                <span className="font-semibold text-white">5:00 PM</span>
               </li>
               <li className="flex justify-between">
                 <span>Prayer Meeting (Fri)</span>
@@ -72,7 +72,7 @@ export function Footer() {
         </div>
 
         <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-blue-200">
-          <p>© {new Date().getFullYear()} Christ Gospel Church (Eden). All rights reserved.</p>
+          <p>© {new Date().getFullYear()} God's Family Church (Eden). All rights reserved.</p>
           <div className="flex space-x-6 mt-4 md:mt-0">
             <a href="#" className="hover:text-white">Privacy Policy</a>
             <a href="#" className="hover:text-white">Terms of Service</a>

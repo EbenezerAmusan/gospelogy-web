@@ -82,7 +82,7 @@ export default function Home() {
               <span className="text-secondary">Unfailing Love</span>
             </h1>
             <p className="text-xl text-blue-50 mb-10 max-w-2xl font-light leading-relaxed drop-shadow-md">
-              Join us at Christ Gospel Church (Gospelogy) as we grow in faith, serve with passion, and build a community of believers.
+              Join us at God's Family Church (Gospelogy) as we grow in faith, serve with passion, and build a community of believers.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
               <Link href="/contact" className="px-8 py-4 bg-secondary text-primary font-bold rounded-full shadow-lg hover:bg-white hover:scale-105 transition-all text-center">
@@ -262,7 +262,7 @@ export default function Home() {
         <div className="absolute inset-0 opacity-10 pattern-dots" />
         <div className="container-custom relative z-10 text-center">
           <h2 className="text-3xl md:text-5xl font-display font-bold text-white max-w-4xl mx-auto leading-tight">
-            "We are dedicated to spreading the Gospel, transforming lives, and building a community of faith."
+            We are dedicated to spreading the Gospel, transforming lives, and building a community of faith.
           </h2>
           <div className="mt-10">
             <Link href="/about" className="inline-block px-8 py-4 bg-white text-primary font-bold rounded-full shadow-lg hover:shadow-xl hover:scale-105 transition-all">

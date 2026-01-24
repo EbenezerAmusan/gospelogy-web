@@ -11,7 +11,7 @@ export default function About() {
       
       <PageHeader 
         title="About Us" 
-        subtitle="Discover our history, mission, and the heart behind Christ Gospel Church."
+        subtitle="Discover our history, mission, and the heart behind God's Family Church."
         // Church congregation
         backgroundImage="https://images.unsplash.com/photo-1445445290350-12a3b863b15d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80"
       />
@@ -23,7 +23,7 @@ export default function About() {
               <span className="text-primary font-bold tracking-wider uppercase text-sm">Who We Are</span>
               <h2 className="text-4xl font-display font-bold mt-2 mb-6 text-gray-900">Welcome to Gospelogy</h2>
               <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                Christ Gospel Church, affectionately known as Gospelogy or Eden, is more than just a building—it's a family. Located in the heart of Agege, Lagos, we are a vibrant community dedicated to experiencing God's presence and sharing His love with our world.
+                God's Family Church, affectionately known as Gospelogy or Eden, is more than just a building—it's a family. Located in the heart of Agege, Lagos, we are a vibrant community dedicated to experiencing God's presence and sharing His love with our world.
               </p>
               <p className="text-lg text-gray-600 mb-8 leading-relaxed">
                 Our journey began with a vision to create a sanctuary where people from all walks of life could find hope, healing, and purpose in Christ. Today, we continue to stand as a beacon of light, empowering believers to live out their faith authentically.
@@ -66,7 +66,7 @@ export default function About() {
         <div className="container-custom">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl font-display font-bold mb-6">Our Core Values</h2>
-            <p className="text-gray-600">These principles guide everything we do at Christ Gospel Church.</p>
+            <p className="text-gray-600">These principles guide everything we do at God's Family Church.</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
