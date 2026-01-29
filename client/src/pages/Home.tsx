@@ -105,7 +105,7 @@ export default function Home() {
               <p className="mb-6 text-blue-100">Experience powerful worship and life-changing messages every week.</p>
               <div className="flex items-center space-x-3 mb-2">
                 <Clock className="text-secondary" />
-                <span className="font-semibold text-xl">9:00 AM</span>
+                <span className="font-semibold text-xl">9:30 AM</span>
               </div>
               <p className="text-sm text-blue-200">Main Service</p>
             </div>
@@ -131,6 +131,96 @@ export default function Home() {
               }} className="inline-flex items-center text-primary font-bold hover:text-secondary transition-colors">
                 Get Directions <ArrowRight className="ml-2 w-4 h-4" />
               </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Community Projects & Evangelism Section */}
+      <section className="py-24 bg-gray-50 overflow-hidden">
+        <div className="container-custom">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+            {/* Ongoing Projects */}
+            <div>
+              <span className="text-primary font-bold tracking-wider uppercase text-sm">Community Impact</span>
+              <h2 className="text-4xl font-display font-bold mt-2 mb-8">Ongoing Projects</h2>
+              <div className="space-y-6">
+                <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+                  <h4 className="font-bold text-xl mb-2 text-primary">Library & Car Park</h4>
+                  <p className="text-gray-600">Currently under construction to better serve our members and community with educational resources and improved accessibility.</p>
+                  <div className="mt-4 h-2 bg-gray-100 rounded-full overflow-hidden">
+                    <div className="h-full bg-secondary w-2/3 rounded-full" />
+                  </div>
+                  <p className="text-xs text-gray-500 mt-2">65% Completed</p>
+                </div>
+                
+                <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+                  <h4 className="font-bold text-xl mb-2 text-primary">Street Lights & Road Repair</h4>
+                  <p className="text-gray-600">Completed community service projects providing safety and infrastructure improvements to Nelson Cole Avenue and surrounding areas.</p>
+                  <span className="inline-block mt-3 px-3 py-1 bg-green-100 text-green-700 text-xs font-bold rounded-full uppercase">Community Service</span>
+                </div>
+
+                <div className="mt-10 p-8 bg-primary/5 rounded-3xl border border-primary/10">
+                  <h4 className="text-2xl font-bold mb-4">Partner With Us</h4>
+                  <p className="text-gray-600 mb-6">If you're interested in contributing towards our community projects, we welcome your support in building a better future together.</p>
+                  <button className="w-full py-4 bg-primary text-white font-bold rounded-xl shadow-lg hover:bg-primary/90 transition-all">
+                    Contribute to Projects
+                  </button>
+                  <p className="text-center text-xs text-gray-500 mt-4 italic">Contribution is purely voluntary and not a compulsion.</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Evangelism & Devotional */}
+            <div className="flex flex-col gap-12">
+              <div className="bg-primary text-white p-10 rounded-3xl shadow-2xl relative overflow-hidden group">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -mr-16 -mt-16 transition-transform group-hover:scale-110" />
+                <span className="text-secondary font-bold tracking-wider uppercase text-sm">The Great Commission</span>
+                <h3 className="text-3xl font-display font-bold mt-2 mb-4">Evangelism</h3>
+                <p className="text-blue-100 mb-6 italic">"Go ye into all the world, and preach the gospel to every creature." — Mark 16:15</p>
+                <div className="bg-white/10 backdrop-blur-sm p-4 rounded-xl border border-white/20 mb-6">
+                  <div className="flex items-center space-x-3 mb-2">
+                    <Calendar className="text-secondary" size={18} />
+                    <span className="font-bold">Every Saturday</span>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <Clock className="text-secondary" size={18} />
+                    <span className="font-bold">4:00 PM - 6:00 PM</span>
+                  </div>
+                </div>
+                <button className="w-full py-3 bg-white text-primary font-bold rounded-xl hover:bg-secondary transition-all">
+                  Join the Work of God
+                </button>
+              </div>
+
+              <div className="bg-white p-10 rounded-3xl shadow-xl border border-gray-100">
+                <span className="text-primary font-bold tracking-wider uppercase text-sm">Daily Bread</span>
+                <h3 className="text-3xl font-display font-bold mt-2 mb-6">Daily Devotional</h3>
+                <div className="space-y-4 mb-8">
+                  <div className="p-4 bg-gray-50 rounded-xl border border-gray-100">
+                    <p className="text-gray-800 font-medium italic">"Thy word is a lamp unto my feet, and a light unto my path."</p>
+                    <p className="text-xs text-gray-500 mt-2">— Psalm 119:105</p>
+                  </div>
+                  <p className="text-gray-600">Download today's devotional or read it directly on our website.</p>
+                </div>
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <button className="flex-1 py-3 border-2 border-primary text-primary font-bold rounded-xl hover:bg-primary hover:text-white transition-all">
+                    Read Online
+                  </button>
+                  <button className="flex-1 py-3 bg-gray-100 text-gray-800 font-bold rounded-xl hover:bg-gray-200 transition-all flex items-center justify-center gap-2">
+                    Download PDF
+                  </button>
+                </div>
+              </div>
+
+              <div className="p-8 bg-secondary/10 rounded-3xl border border-secondary/20">
+                <h4 className="text-xl font-bold mb-2">Stay Updated</h4>
+                <p className="text-sm text-gray-600 mb-6">Subscribe to our newsletter for weekly devotionals and church updates.</p>
+                <form className="flex gap-2">
+                  <input type="email" placeholder="Your email" className="flex-1 px-4 py-2 rounded-lg border border-gray-200 outline-none focus:border-primary" />
+                  <button className="px-4 py-2 bg-primary text-white font-bold rounded-lg text-sm">Join</button>
+                </form>
+              </div>
             </div>
           </div>
         </div>

@@ -39,7 +39,7 @@ export function Footer() {
             <ul className="space-y-3 text-blue-100">
               <li className="flex justify-between">
                 <span>Sunday Service</span>
-                <span className="font-semibold text-white">9:00 AM</span>
+                <span className="font-semibold text-white">9:30 AM</span>
               </li>
               <li className="flex justify-between">
                 <span>Bible Study (Wed)</span>
