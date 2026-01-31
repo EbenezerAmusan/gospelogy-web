@@ -8,6 +8,8 @@ import { Calendar, Clock, ArrowRight, PlayCircle, MapPin } from "lucide-react";
 import { format } from "date-fns";
 import { useState, useEffect } from "react";
 
+import churchHero from "@assets/Gemini_Generated_Image_ljvvacljvvacljvv_1769866389407.png";
+
 const TypewriterText = ({ text }: { text: string }) => {
   const [displayText, setDisplayText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
@@ -61,9 +63,8 @@ export default function Home() {
       <section className="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-gradient-to-r from-primary/90 to-primary/40 z-10 mix-blend-multiply" />
-          {/* Worship hands raised in church concert setting */}
           <img 
-            src="https://images.unsplash.com/photo-1438232992991-995b7058bbb3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80" 
+            src={churchHero} 
             alt="Worship Background" 
             className="w-full h-full object-cover"
           />

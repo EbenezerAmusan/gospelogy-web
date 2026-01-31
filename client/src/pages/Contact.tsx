@@ -5,6 +5,8 @@ import { MapPin, Phone, Mail, Clock, Send } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 
+import churchHero from "@assets/Gemini_Generated_Image_ljvvacljvvacljvv_1769866389407.png";
+
 export default function Contact() {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -31,8 +33,7 @@ export default function Contact() {
       <PageHeader 
         title="Contact Us" 
         subtitle="We'd love to hear from you. Reach out with questions, prayer requests, or just to say hello."
-        // Contact/phone/writing
-        backgroundImage="https://images.unsplash.com/photo-1423666639041-f56000c27a9a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80"
+        backgroundImage={churchHero}
       />
 
       <section className="py-20 bg-white">

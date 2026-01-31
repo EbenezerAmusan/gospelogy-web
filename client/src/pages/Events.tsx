@@ -6,6 +6,8 @@ import { format } from "date-fns";
 import { MapPin, Calendar as CalendarIcon } from "lucide-react";
 import { motion } from "framer-motion";
 
+import churchHero from "@assets/Gemini_Generated_Image_ljvvacljvvacljvv_1769866389407.png";
+
 export default function Events() {
   const { data: events, isLoading } = useEvents();
 
@@ -16,8 +18,7 @@ export default function Events() {
       <PageHeader 
         title="Upcoming Events" 
         subtitle="Mark your calendar and join us for these special gatherings."
-        // Calendar/planner/events
-        backgroundImage="https://images.unsplash.com/photo-1506784983877-45594efa4cbe?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80"
+        backgroundImage={churchHero}
       />
 
       <section className="py-20 bg-gray-50">

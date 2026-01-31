@@ -4,6 +4,8 @@ import { PageHeader } from "@/components/PageHeader";
 import { motion } from "framer-motion";
 import { Check } from "lucide-react";
 
+import churchHero from "@assets/Gemini_Generated_Image_ljvvacljvvacljvv_1769866389407.png";
+
 export default function About() {
   return (
     <div className="min-h-screen bg-background flex flex-col">
@@ -12,8 +14,7 @@ export default function About() {
       <PageHeader 
         title="About Us" 
         subtitle="Discover our history, mission, and the heart behind God's Family Church."
-        // Church congregation
-        backgroundImage="https://images.unsplash.com/photo-1445445290350-12a3b863b15d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80"
+        backgroundImage={churchHero}
       />
 
       <section className="py-20 bg-white">

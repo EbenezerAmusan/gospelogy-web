@@ -5,6 +5,8 @@ import { useMinistries } from "@/hooks/use-ministries";
 import { Users, Clock } from "lucide-react";
 import { motion } from "framer-motion";
 
+import churchHero from "@assets/Gemini_Generated_Image_ljvvacljvvacljvv_1769866389407.png";
+
 export default function Ministries() {
   const { data: ministries, isLoading } = useMinistries();
 
@@ -15,8 +17,7 @@ export default function Ministries() {
       <PageHeader 
         title="Our Ministries" 
         subtitle="Find your place to serve, connect, and grow within the GFC family."
-        // Community hands
-        backgroundImage="https://images.unsplash.com/photo-1529070538774-1843cb3265df?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80"
+        backgroundImage={churchHero}
       />
 
       <section className="py-20 bg-white">

@@ -7,6 +7,8 @@ import { format } from "date-fns";
 import { Play, Calendar, User, Search } from "lucide-react";
 import { motion } from "framer-motion";
 
+import churchHero from "@assets/Gemini_Generated_Image_ljvvacljvvacljvv_1769866389407.png";
+
 export default function Sermons() {
   const { data: sermons, isLoading } = useSermons();
   const [search, setSearch] = useState("");
@@ -24,8 +26,7 @@ export default function Sermons() {
       <PageHeader 
         title="Sermons" 
         subtitle="Dive into the Word of God with our archive of life-changing messages."
-        // Bible study open book
-        backgroundImage="https://images.unsplash.com/photo-1504052434569-70ad5836ab65?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80"
+        backgroundImage={churchHero}
       />
 
       <section className="py-16 bg-gray-50 flex-1">
