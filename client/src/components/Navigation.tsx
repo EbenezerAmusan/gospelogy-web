@@ -21,7 +21,9 @@ export function Navigation() {
   const links = [
     { href: "/", label: "Home" },
     { href: "/about", label: "About Us" },
+    { href: "/leadership", label: "Leadership" },
     { href: "/sermons", label: "Sermons" },
+    { href: "/devotional", label: "Devotional" },
     { href: "/ministries", label: "Ministries" },
     { href: "/events", label: "Events" },
     { href: "/contact", label: "Contact" },
