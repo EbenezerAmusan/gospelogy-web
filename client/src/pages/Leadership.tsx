@@ -4,48 +4,38 @@ import { PageHeader } from "@/components/PageHeader";
 import { motion } from "framer-motion";
 import { Mail, Phone } from "lucide-react";
 import churchHero from "@assets/Gemini_Generated_Image_ljvvacljvvacljvv_1769866389407.png";
+import pastorAphaImg from "@assets/Pastor_Apha_1769987324425.jpg";
+import pastorLilianImg from "@assets/Pastor_Mrs._Lilian_(2)_1769987324428.jpg";
+import pastorCalistaImg from "@assets/Pastor_Calista_1769987324427.jpg";
+import pastorBerryImg from "@assets/Pastor_Berry_1769987324426.jpg";
 
 const leaders = [
   {
     name: "Pastor Perez Apha",
     role: "Senior Pastor",
     description: "Pastor Perez Apha is the visionary leader of God's Family Church. With a heart for discipleship and spiritual growth, he leads the congregation with wisdom, love, and a deep commitment to the Gospel.",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80",
+    image: pastorAphaImg,
     featured: true
+  },
+  {
+    name: "Pastor Mrs. Lilian Apha",
+    role: "Associate Pastor",
+    description: "Pastor Mrs. Lilian Apha serves alongside the Senior Pastor, providing spiritual guidance and pastoral care to the congregation with warmth and dedication.",
+    image: pastorLilianImg,
+    featured: false
   },
   {
     name: "Pastor Calista",
     role: "Children's Ministry Leader",
     description: "Pastor Calista oversees the Children's Ministry, nurturing young hearts in the ways of the Lord with creativity, patience, and genuine love for the next generation.",
-    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80",
+    image: pastorCalistaImg,
     featured: false
   },
   {
-    name: "Brother Michael",
-    role: "Music Ministry Leader",
-    description: "Brother Michael leads our Music Ministry, guiding the congregation in heartfelt worship and praise. His passion for music is matched only by his love for God.",
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80",
-    featured: false
-  },
-  {
-    name: "Deacon Emmanuel",
-    role: "Welfare Coordinator",
-    description: "Deacon Emmanuel coordinates welfare activities, ensuring that members in need receive support and care from the church family.",
-    image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80",
-    featured: false
-  },
-  {
-    name: "Sister Grace",
-    role: "Women's Fellowship Leader",
-    description: "Sister Grace leads the Women's Fellowship with grace and compassion, creating a supportive community where women can grow in faith together.",
-    image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80",
-    featured: false
-  },
-  {
-    name: "Brother David",
-    role: "Youth Ministry Coordinator",
-    description: "Brother David energizes and mentors our youth, helping young people discover their purpose and develop a lasting relationship with Christ.",
-    image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80",
+    name: "Pastor Berry",
+    role: "Ministry Leader",
+    description: "Pastor Berry serves faithfully in ministry, contributing to the spiritual growth and development of the church family.",
+    image: pastorBerryImg,
     featured: false
   }
 ];
