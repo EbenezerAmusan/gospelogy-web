@@ -8,7 +8,7 @@ import { Calendar, Clock, ArrowRight, PlayCircle, MapPin } from "lucide-react";
 import { format } from "date-fns";
 import { useState, useEffect } from "react";
 
-import churchHero from "@assets/Gemini_Generated_Image_ljvvacljvvacljvv_1769866389407.png";
+import homeHero from "@assets/Home-Hero_Image_1769988476491.png";
 
 const TypewriterText = ({ text }: { text: string }) => {
   const [displayText, setDisplayText] = useState("");
@@ -64,7 +64,7 @@ export default function Home() {
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-gradient-to-r from-primary/90 to-primary/40 z-10 mix-blend-multiply" />
           <img 
-            src={churchHero} 
+            src={homeHero} 
             alt="Worship Background" 
             className="w-full h-full object-cover"
           />
