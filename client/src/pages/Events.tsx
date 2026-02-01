@@ -91,6 +91,7 @@ function RecurringEventCountdown({
         <div>
           <h3 className="text-xl font-bold font-display text-white">{title}</h3>
           <p className="text-white/80 text-sm">Every {dayName} at {timeDisplay}</p>
+          <p className="text-white/90 text-sm font-medium mt-1">Next: {format(targetDate, "MMMM d, yyyy")}</p>
         </div>
       </div>
       
