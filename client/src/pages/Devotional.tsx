@@ -28,6 +28,16 @@ const devotionals = [
   { day: 19, month: "January", title: "Daily Bread", scripture: "Daily Word", imageUrl: "/devotional-jan-19.jpeg", isImageOnly: true },
   { day: 20, month: "January", title: "Daily Bread", scripture: "Daily Word", imageUrl: "/devotional-jan-20.jpeg", isImageOnly: true },
   { day: 21, month: "January", title: "Daily Bread", scripture: "Daily Word", imageUrl: "/devotional-jan-21.jpeg", isImageOnly: true },
+  { day: 22, month: "January", title: "Daily Bread", scripture: "Daily Word", imageUrl: "/devotional-jan-22.jpeg", isImageOnly: true },
+  { day: 23, month: "January", title: "Daily Bread", scripture: "Daily Word", imageUrl: "/devotional-jan-23.jpeg", isImageOnly: true },
+  { day: 24, month: "January", title: "Daily Bread", scripture: "Daily Word", imageUrl: "/devotional-jan-24.jpeg", isImageOnly: true },
+  { day: 25, month: "January", title: "Daily Bread", scripture: "Daily Word", imageUrl: "/devotional-jan-25.jpeg", isImageOnly: true },
+  { day: 26, month: "January", title: "Daily Bread", scripture: "Daily Word", imageUrl: "/devotional-jan-26.jpeg", isImageOnly: true },
+  { day: 27, month: "January", title: "Daily Bread", scripture: "Daily Word", imageUrl: "/devotional-jan-27.jpeg", isImageOnly: true },
+  { day: 28, month: "January", title: "Daily Bread", scripture: "Daily Word", imageUrl: "/devotional-jan-28.jpeg", isImageOnly: true },
+  { day: 29, month: "January", title: "Daily Bread", scripture: "Daily Word", imageUrl: "/devotional-jan-29.jpeg", isImageOnly: true },
+  { day: 30, month: "January", title: "Daily Bread", scripture: "Daily Word", imageUrl: "/devotional-jan-30.jpeg", isImageOnly: true },
+  { day: 31, month: "January", title: "Daily Bread", scripture: "Daily Word", imageUrl: "/devotional-jan-31.jpeg", isImageOnly: true },
 ];
 
 export default function Devotional() {
