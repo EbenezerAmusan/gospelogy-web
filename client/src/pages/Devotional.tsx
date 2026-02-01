@@ -12,10 +12,8 @@ const devotionals = [
     month: "January",
     title: "Feast on the Word",
     scripture: "Matthew 4:4",
-    verse: "But He answered and said, 'It is written, Man shall not live by bread alone, but by every word that proceeds from the mouth of God.'",
-    reflection: "Days of 'Feastival' are over, however, as it is written, man shall not live by bread alone but by every word that proceed from the mouth of the Lord. As you begin the new year make up your mind to set up days of 'Word Feastival' in a month and a time of 'Word Feastival' every day that you may grow.",
-    prayer: "How far will I go spiritually with 'Food Feastival'? I will feed my spirit daily by studying and meditating on the word. Remember, the word is your life.",
-    action: "Deuteronomy 32:46-47 - Set your hearts on all the words which I testify among you today, which you shall command your children to be careful to observe—all the words of this law. For it is not a futile thing for you, because it is your life, and by this word you shall prolong your days in the land which you cross over the Jordan to possess."
+    imageUrl: "/devotional-jan-1.jpeg",
+    isImageOnly: true
   },
   {
     day: 2,
@@ -174,53 +172,76 @@ export default function Devotional() {
                   <p className="text-blue-200 font-medium">{devotional.scripture}</p>
                 </div>
 
-                <div className="p-8 md:p-12 space-y-8">
-                  {/* Scripture Verse */}
-                  <div className="bg-secondary/10 p-6 rounded-2xl border-l-4 border-secondary">
-                    <p className="text-xl text-gray-800 italic leading-relaxed">"{devotional.verse}"</p>
-                    <p className="mt-3 text-primary font-bold text-sm">— {devotional.scripture}</p>
+                {devotional.isImageOnly ? (
+                  <div className="p-4 md:p-8">
+                    <img 
+                      src={devotional.imageUrl} 
+                      alt={`${devotional.month} ${devotional.day} - ${devotional.title}`}
+                      className="w-full max-w-2xl mx-auto rounded-xl shadow-lg"
+                    />
                   </div>
+                ) : (
+                  <div className="p-8 md:p-12 space-y-8">
+                    {/* Scripture Verse */}
+                    <div className="bg-secondary/10 p-6 rounded-2xl border-l-4 border-secondary">
+                      <p className="text-xl text-gray-800 italic leading-relaxed">"{devotional.verse}"</p>
+                      <p className="mt-3 text-primary font-bold text-sm">— {devotional.scripture}</p>
+                    </div>
 
-                  {/* Reflection */}
-                  <div>
-                    <h3 className="text-xl font-bold text-primary mb-4 flex items-center gap-2">
-                      <span className="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center text-sm">1</span>
-                      Reflection
-                    </h3>
-                    <p className="text-gray-700 leading-relaxed text-lg">{devotional.reflection}</p>
-                  </div>
+                    {/* Reflection */}
+                    <div>
+                      <h3 className="text-xl font-bold text-primary mb-4 flex items-center gap-2">
+                        <span className="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center text-sm">1</span>
+                        Reflection
+                      </h3>
+                      <p className="text-gray-700 leading-relaxed text-lg">{devotional.reflection}</p>
+                    </div>
 
-                  {/* Prayer */}
-                  <div>
-                    <h3 className="text-xl font-bold text-primary mb-4 flex items-center gap-2">
-                      <span className="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center text-sm">2</span>
-                      Prayer
-                    </h3>
-                    <p className="text-gray-700 leading-relaxed text-lg italic">{devotional.prayer}</p>
-                  </div>
+                    {/* Prayer */}
+                    <div>
+                      <h3 className="text-xl font-bold text-primary mb-4 flex items-center gap-2">
+                        <span className="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center text-sm">2</span>
+                        Prayer
+                      </h3>
+                      <p className="text-gray-700 leading-relaxed text-lg italic">{devotional.prayer}</p>
+                    </div>
 
-                  {/* Action Point */}
-                  <div className="bg-gray-50 p-6 rounded-2xl">
-                    <h3 className="text-xl font-bold text-primary mb-4 flex items-center gap-2">
-                      <span className="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center text-sm">3</span>
-                      Today's Action
-                    </h3>
-                    <p className="text-gray-700 leading-relaxed text-lg">{devotional.action}</p>
+                    {/* Action Point */}
+                    <div className="bg-gray-50 p-6 rounded-2xl">
+                      <h3 className="text-xl font-bold text-primary mb-4 flex items-center gap-2">
+                        <span className="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center text-sm">3</span>
+                        Today's Action
+                      </h3>
+                      <p className="text-gray-700 leading-relaxed text-lg">{devotional.action}</p>
+                    </div>
                   </div>
-                </div>
+                )}
 
                 {/* Download Section */}
-                <div className="border-t border-gray-100 p-6 bg-gray-50 flex flex-col sm:flex-row items-center justify-between gap-4">
-                  <p className="text-gray-600 text-sm">Want to read offline? Download the full devotional guide.</p>
-                  <a 
-                    href="/devotional-guide-2026.pdf" 
-                    download="GFC-Eden-Devotional-Guide-2026.pdf"
-                    className="flex items-center gap-2 px-6 py-3 bg-primary text-white font-bold rounded-xl hover:bg-primary/90 transition-all" 
-                    data-testid="button-download-pdf"
-                  >
-                    <Download size={18} />
-                    Download PDF
-                  </a>
+                <div className="border-t border-gray-100 p-6 bg-gray-50">
+                  <p className="text-gray-600 text-sm mb-4 text-center">Want to read offline? Choose a download option:</p>
+                  <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+                    {devotional.imageUrl && (
+                      <a 
+                        href={devotional.imageUrl} 
+                        download={`GFC-Eden-Devotional-${devotional.month}-${devotional.day}.jpeg`}
+                        className="flex items-center gap-2 px-6 py-3 border-2 border-primary text-primary font-bold rounded-xl hover:bg-primary hover:text-white transition-all" 
+                        data-testid="button-download-day"
+                      >
+                        <Download size={18} />
+                        Download This Day
+                      </a>
+                    )}
+                    <a 
+                      href="/devotional-guide-2026.pdf" 
+                      download="GFC-Eden-Devotional-Guide-2026.pdf"
+                      className="flex items-center gap-2 px-6 py-3 bg-primary text-white font-bold rounded-xl hover:bg-primary/90 transition-all" 
+                      data-testid="button-download-pdf"
+                    >
+                      <Download size={18} />
+                      Download Full Guide
+                    </a>
+                  </div>
                 </div>
               </motion.div>
             </AnimatePresence>
