@@ -7,74 +7,27 @@ import { motion, AnimatePresence } from "framer-motion";
 import churchHero from "@assets/Gemini_Generated_Image_ljvvacljvvacljvv_1769866389407.png";
 
 const devotionals = [
-  {
-    day: 1,
-    month: "January",
-    title: "Feast on the Word",
-    scripture: "Matthew 4:4",
-    imageUrl: "/devotional-jan-1.jpeg",
-    isImageOnly: true
-  },
-  {
-    day: 2,
-    month: "January", 
-    title: "Walking in Faith",
-    scripture: "Hebrews 11:1",
-    verse: "Now faith is confidence in what we hope for and assurance about what we do not see.",
-    reflection: "Faith is the foundation of our relationship with God. It's not about seeing before believing, but believing before seeing. When we walk by faith, we trust that God's promises are true even when circumstances seem impossible.",
-    prayer: "Lord, strengthen my faith today. Help me to trust in Your promises even when I cannot see the way ahead. Give me the courage to step out in faith, knowing that You are always with me. Amen.",
-    action: "Identify one area of your life where you need to exercise more faith and commit it to God."
-  },
-  {
-    day: 3,
-    month: "January",
-    title: "The Power of Prayer",
-    scripture: "Philippians 4:6-7",
-    verse: "Do not be anxious about anything, but in every situation, by prayer and petition, with thanksgiving, present your requests to God. And the peace of God, which transcends all understanding, will guard your hearts and your minds in Christ Jesus.",
-    reflection: "Prayer is our direct line of communication with God. It's not just about asking for things; it's about building a relationship with our Heavenly Father. When we bring everything to God in prayer, He promises to give us peace that surpasses all understanding.",
-    prayer: "Father, teach me to pray without ceasing. Help me to bring every concern, every joy, and every need to You. Thank You for the privilege of prayer and for the peace that comes from spending time in Your presence. Amen.",
-    action: "Set aside 10 minutes today for uninterrupted prayer time with God."
-  },
-  {
-    day: 4,
-    month: "January",
-    title: "Love One Another",
-    scripture: "John 13:34-35",
-    verse: "A new command I give you: Love one another. As I have loved you, so you must love one another. By this everyone will know that you are my disciples, if you love one another.",
-    reflection: "Jesus gave us a new commandment - to love one another as He loved us. This kind of love is sacrificial, unconditional, and transformative. It's not just a feeling but an action that reflects Christ's love to the world around us.",
-    prayer: "Lord Jesus, fill my heart with Your love so that I may love others as You have loved me. Help me to show kindness, patience, and compassion to everyone I encounter today. May my love be a testimony of Your grace. Amen.",
-    action: "Reach out to someone today with an act of kindness - a call, a message, or a helping hand."
-  },
-  {
-    day: 5,
-    month: "January",
-    title: "Trusting God's Plan",
-    scripture: "Jeremiah 29:11",
-    verse: "For I know the plans I have for you, declares the LORD, plans to prosper you and not to harm you, plans to give you hope and a future.",
-    reflection: "God has a beautiful plan for your life. Even when things don't make sense, even when the path seems unclear, know that He is working all things together for your good. His plans are always better than our own.",
-    prayer: "Heavenly Father, I surrender my plans to You. Help me to trust in Your perfect plan for my life, even when I don't understand. Give me patience to wait on Your timing and faith to follow where You lead. Amen.",
-    action: "Write down a situation you're struggling to trust God with and pray over it specifically."
-  },
-  {
-    day: 6,
-    month: "January",
-    title: "The Joy of the Lord",
-    scripture: "Nehemiah 8:10",
-    verse: "Do not grieve, for the joy of the LORD is your strength.",
-    reflection: "Joy is not dependent on our circumstances but on our relationship with God. The joy of the Lord is a deep, abiding sense of peace and gladness that comes from knowing Him. This joy becomes our strength in difficult times.",
-    prayer: "Lord, fill me with Your joy today. Help me to find my strength in You rather than in my circumstances. May Your joy overflow from my life and bring hope to others around me. Amen.",
-    action: "List five things about God that bring you joy and thank Him for each one."
-  },
-  {
-    day: 7,
-    month: "January",
-    title: "Rest in His Presence",
-    scripture: "Matthew 11:28-30",
-    verse: "Come to me, all you who are weary and burdened, and I will give you rest. Take my yoke upon you and learn from me, for I am gentle and humble in heart, and you will find rest for your souls.",
-    reflection: "In a world that never stops, Jesus invites us to rest. This is not just physical rest but soul rest - the kind of peace that comes from laying our burdens at His feet and trusting Him completely.",
-    prayer: "Jesus, I come to You today weary and burdened. I lay all my concerns at Your feet and accept Your invitation to rest. Teach me to find peace in Your presence and strength in Your gentleness. Amen.",
-    action: "Take time today to be still before God - no requests, just being in His presence."
-  }
+  { day: 1, month: "January", title: "Feast on the Word", scripture: "Matthew 4:4", imageUrl: "/devotional-jan-1.jpeg", isImageOnly: true },
+  { day: 2, month: "January", title: "Daily Bread", scripture: "Daily Word", imageUrl: "/devotional-jan-2.jpeg", isImageOnly: true },
+  { day: 3, month: "January", title: "Daily Bread", scripture: "Daily Word", imageUrl: "/devotional-jan-3.jpeg", isImageOnly: true },
+  { day: 4, month: "January", title: "Daily Bread", scripture: "Daily Word", imageUrl: "/devotional-jan-4.jpeg", isImageOnly: true },
+  { day: 5, month: "January", title: "Daily Bread", scripture: "Daily Word", imageUrl: "/devotional-jan-5.jpeg", isImageOnly: true },
+  { day: 6, month: "January", title: "Daily Bread", scripture: "Daily Word", imageUrl: "/devotional-jan-6.jpeg", isImageOnly: true },
+  { day: 7, month: "January", title: "Daily Bread", scripture: "Daily Word", imageUrl: "/devotional-jan-7.jpeg", isImageOnly: true },
+  { day: 8, month: "January", title: "Daily Bread", scripture: "Daily Word", imageUrl: "/devotional-jan-8.jpeg", isImageOnly: true },
+  { day: 9, month: "January", title: "Daily Bread", scripture: "Daily Word", imageUrl: "/devotional-jan-9.jpeg", isImageOnly: true },
+  { day: 10, month: "January", title: "Daily Bread", scripture: "Daily Word", imageUrl: "/devotional-jan-10.jpeg", isImageOnly: true },
+  { day: 11, month: "January", title: "Daily Bread", scripture: "Daily Word", imageUrl: "/devotional-jan-11.jpeg", isImageOnly: true },
+  { day: 12, month: "January", title: "Daily Bread", scripture: "Daily Word", imageUrl: "/devotional-jan-12.jpeg", isImageOnly: true },
+  { day: 13, month: "January", title: "Daily Bread", scripture: "Daily Word", imageUrl: "/devotional-jan-13.jpeg", isImageOnly: true },
+  { day: 14, month: "January", title: "Daily Bread", scripture: "Daily Word", imageUrl: "/devotional-jan-14.jpeg", isImageOnly: true },
+  { day: 15, month: "January", title: "Daily Bread", scripture: "Daily Word", imageUrl: "/devotional-jan-15.jpeg", isImageOnly: true },
+  { day: 16, month: "January", title: "Daily Bread", scripture: "Daily Word", imageUrl: "/devotional-jan-16.jpeg", isImageOnly: true },
+  { day: 17, month: "January", title: "Daily Bread", scripture: "Daily Word", imageUrl: "/devotional-jan-17.jpeg", isImageOnly: true },
+  { day: 18, month: "January", title: "Daily Bread", scripture: "Daily Word", imageUrl: "/devotional-jan-18.jpeg", isImageOnly: true },
+  { day: 19, month: "January", title: "Daily Bread", scripture: "Daily Word", imageUrl: "/devotional-jan-19.jpeg", isImageOnly: true },
+  { day: 20, month: "January", title: "Daily Bread", scripture: "Daily Word", imageUrl: "/devotional-jan-20.jpeg", isImageOnly: true },
+  { day: 21, month: "January", title: "Daily Bread", scripture: "Daily Word", imageUrl: "/devotional-jan-21.jpeg", isImageOnly: true },
 ];
 
 export default function Devotional() {
