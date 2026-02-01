@@ -10,12 +10,12 @@ const devotionals = [
   {
     day: 1,
     month: "January",
-    title: "A New Beginning",
-    scripture: "Lamentations 3:22-23",
-    verse: "Because of the LORD's great love we are not consumed, for his compassions never fail. They are new every morning; great is your faithfulness.",
-    reflection: "As we begin this new year, let us remember that God's mercies are new every morning. Each day is a fresh start, an opportunity to draw closer to Him and experience His unfailing love. No matter what yesterday brought, today offers the promise of His renewed compassion and grace.",
-    prayer: "Heavenly Father, thank You for Your new mercies each day. Help me to embrace this fresh start with faith and hope. Guide my steps throughout this year as I seek to grow closer to You. In Jesus' name, Amen.",
-    action: "Write down three things you are grateful for as you start this new year."
+    title: "Feast on the Word",
+    scripture: "Matthew 4:4",
+    verse: "But He answered and said, 'It is written, Man shall not live by bread alone, but by every word that proceeds from the mouth of God.'",
+    reflection: "Days of 'Feastival' are over, however, as it is written, man shall not live by bread alone but by every word that proceed from the mouth of the Lord. As you begin the new year make up your mind to set up days of 'Word Feastival' in a month and a time of 'Word Feastival' every day that you may grow.",
+    prayer: "How far will I go spiritually with 'Food Feastival'? I will feed my spirit daily by studying and meditating on the word. Remember, the word is your life.",
+    action: "Deuteronomy 32:46-47 - Set your hearts on all the words which I testify among you today, which you shall command your children to be careful to observe—all the words of this law. For it is not a futile thing for you, because it is your life, and by this word you shall prolong your days in the land which you cross over the Jordan to possess."
   },
   {
     day: 2,
