@@ -106,11 +106,11 @@ export default function Leadership() {
                 transition={{ delay: idx * 0.1 }}
                 className="bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 hover:shadow-xl transition-all group"
               >
-                <div className="h-64 overflow-hidden">
+                <div className="h-80 overflow-hidden">
                   <img 
                     src={leader.image}
                     alt={leader.name}
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-110"
                   />
                 </div>
                 <div className="p-6 text-center">
