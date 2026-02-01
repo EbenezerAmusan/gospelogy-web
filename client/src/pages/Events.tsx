@@ -89,7 +89,7 @@ function RecurringEventCountdown({
           <Icon size={24} />
         </div>
         <div>
-          <h3 className="text-xl font-bold font-display">{title}</h3>
+          <h3 className="text-xl font-bold font-display text-white">{title}</h3>
           <p className="text-white/80 text-sm">Every {dayName} at {timeDisplay}</p>
         </div>
       </div>
