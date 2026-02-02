@@ -40,8 +40,24 @@ const devotionals = [
   { day: 31, month: "January", title: "Daily Bread", scripture: "Daily Word", imageUrl: "/devotional-jan-31.jpeg", isImageOnly: true },
 ];
 
+function getTodayDevotionalIndex(): number {
+  const today = new Date();
+  const currentMonth = today.getMonth(); // 0 = January
+  const currentDayOfMonth = today.getDate();
+  
+  // Find the devotional that matches today's date
+  const index = devotionals.findIndex(d => {
+    const monthIndex = ["January", "February", "March", "April", "May", "June", 
+                        "July", "August", "September", "October", "November", "December"].indexOf(d.month);
+    return monthIndex === currentMonth && d.day === currentDayOfMonth;
+  });
+  
+  // If today's devotional exists, return its index; otherwise return 0
+  return index >= 0 ? index : 0;
+}
+
 export default function Devotional() {
-  const [currentDay, setCurrentDay] = useState(0);
+  const [currentDay, setCurrentDay] = useState(() => getTodayDevotionalIndex());
   const devotional = devotionals[currentDay];
 
   const nextDay = () => {
