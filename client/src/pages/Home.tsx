@@ -101,24 +101,32 @@ export default function Home() {
       <section className="py-20 bg-white">
         <div className="container-custom">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 -mt-32 relative z-30">
-            <div className="bg-primary text-white p-8 rounded-2xl shadow-xl transform hover:-translate-y-2 transition-transform duration-300">
-              <h3 className="text-2xl font-bold mb-4 text-white">Join Us Sunday</h3>
-              <p className="mb-6 text-blue-100">Experience powerful worship and life-changing messages every week.</p>
-              <div className="flex items-center space-x-3 mb-2">
-                <Clock className="text-secondary" />
-                <span className="font-semibold text-xl">9:30 AM</span>
+            <div className="bg-primary text-white rounded-2xl shadow-xl transform hover:-translate-y-2 transition-transform duration-300 overflow-hidden">
+              <div className="h-40 overflow-hidden">
+                <img src="/sunday-service.jpeg" alt="Sunday Service" className="w-full h-full object-cover" />
               </div>
-              <p className="text-sm text-blue-200">Main Service</p>
+              <div className="p-6">
+                <h3 className="text-2xl font-bold mb-2 text-white">Sunday Service</h3>
+                <p className="mb-4 text-blue-100 text-sm">Experience powerful worship and life-changing messages every week.</p>
+                <div className="flex items-center space-x-3 mb-1">
+                  <Clock className="text-secondary" size={18} />
+                  <span className="font-semibold text-lg">Every Sunday at 9:30 AM</span>
+                </div>
+              </div>
             </div>
 
-            <div className="bg-white p-8 rounded-2xl shadow-xl border border-gray-100 transform hover:-translate-y-2 transition-transform duration-300">
-              <h3 className="text-2xl font-bold mb-4 text-primary">Midweek Service</h3>
-              <p className="mb-6 text-gray-600">Recharge your spirit with in-depth Bible study and prayer.</p>
-              <div className="flex items-center space-x-3 mb-2">
-                <Calendar className="text-primary" />
-                <span className="font-semibold text-xl text-gray-800">Wednesday</span>
+            <div className="bg-white rounded-2xl shadow-xl border border-gray-100 transform hover:-translate-y-2 transition-transform duration-300 overflow-hidden">
+              <div className="h-40 overflow-hidden">
+                <img src="/bible-study.jpeg" alt="Bible Study" className="w-full h-full object-cover" />
               </div>
-              <p className="text-sm text-gray-500">5:00 PM - Bible Study</p>
+              <div className="p-6">
+                <h3 className="text-2xl font-bold mb-2 text-primary">Bible Study</h3>
+                <p className="mb-4 text-gray-600 text-sm">Recharge your spirit with in-depth Bible study and prayer.</p>
+                <div className="flex items-center space-x-3 mb-1">
+                  <Calendar className="text-primary" size={18} />
+                  <span className="font-semibold text-lg text-gray-800">Every Wednesday at 5:00 PM</span>
+                </div>
+              </div>
             </div>
 
             <div className="bg-gray-50 p-8 rounded-2xl shadow-xl border border-gray-200 transform hover:-translate-y-2 transition-transform duration-300">
