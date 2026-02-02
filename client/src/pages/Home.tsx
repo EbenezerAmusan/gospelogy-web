@@ -1,11 +1,8 @@
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
-import { useEvents } from "@/hooks/use-events";
-import { useSermons } from "@/hooks/use-sermons";
 import { Link } from "wouter";
 import { motion } from "framer-motion";
-import { Calendar, Clock, ArrowRight, PlayCircle, MapPin } from "lucide-react";
-import { format } from "date-fns";
+import { Calendar, Clock, ArrowRight, MapPin } from "lucide-react";
 import { useState, useEffect } from "react";
 
 import homeHero from "@assets/Home-Hero_Image_1769988476491.png";
@@ -47,14 +44,6 @@ const TypewriterText = ({ text }: { text: string }) => {
 };
 
 export default function Home() {
-  const { data: events, isLoading: eventsLoading } = useEvents();
-  const { data: sermons, isLoading: sermonsLoading } = useSermons();
-
-  // Get the latest sermon
-  const latestSermon = sermons?.[0];
-  // Get upcoming events (limit to 3)
-  const upcomingEvents = events?.slice(0, 3);
-
   return (
     <div className="min-h-screen bg-background flex flex-col">
       <Navigation />
@@ -223,66 +212,6 @@ export default function Home() {
                 </form>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Latest Sermon Preview */}
-      <section className="py-24 bg-gray-50">
-        <div className="container-custom">
-          <div className="flex flex-col md:flex-row justify-between items-end mb-12">
-            <div>
-              <span className="text-primary font-bold tracking-wider uppercase text-sm">Grow in Faith</span>
-              <h2 className="text-4xl font-display font-bold mt-2 text-gray-900">Latest Sermon</h2>
-            </div>
-            <Link href="/sermons" className="hidden md:flex items-center text-primary font-bold hover:text-primary/80 transition-colors mt-4 md:mt-0">
-              View All Messages <ArrowRight className="ml-2 w-5 h-5" />
-            </Link>
-          </div>
-
-          {sermonsLoading ? (
-            <div className="animate-pulse h-96 bg-gray-200 rounded-2xl w-full"></div>
-          ) : latestSermon ? (
-            <div className="relative rounded-3xl overflow-hidden shadow-2xl group cursor-pointer h-[500px]">
-              {/* Preacher speaking at podium */}
-              <img 
-                src={latestSermon.imageUrl || "https://images.unsplash.com/photo-1478147427282-58a87a120781?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80"} 
-                alt={latestSermon.title} 
-                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-90" />
-              
-              <div className="absolute bottom-0 left-0 p-8 md:p-12 w-full">
-                <div className="flex items-center space-x-2 text-secondary mb-3 font-semibold">
-                  <PlayCircle className="fill-secondary text-black" />
-                  <span>Latest Message</span>
-                </div>
-                <h3 className="text-3xl md:text-5xl font-bold text-white mb-4 font-display leading-tight">{latestSermon.title}</h3>
-                <div className="flex flex-col md:flex-row md:items-center text-gray-300 space-y-2 md:space-y-0 md:space-x-6">
-                  <span>{latestSermon.preacher}</span>
-                  <span className="hidden md:inline">•</span>
-                  <span>{format(new Date(latestSermon.date), "MMMM d, yyyy")}</span>
-                  {latestSermon.series && (
-                    <>
-                      <span className="hidden md:inline">•</span>
-                      <span className="bg-white/20 px-3 py-1 rounded-full text-xs font-bold text-white uppercase tracking-wide">
-                        {latestSermon.series}
-                      </span>
-                    </>
-                  )}
-                </div>
-              </div>
-            </div>
-          ) : (
-            <div className="text-center py-20 bg-white rounded-2xl shadow-sm border border-gray-100">
-              <p className="text-gray-500">No sermons available yet.</p>
-            </div>
-          )}
-          
-          <div className="mt-8 md:hidden text-center">
-            <Link href="/sermons" className="inline-flex items-center text-primary font-bold">
-              View All Messages <ArrowRight className="ml-2 w-5 h-5" />
-            </Link>
           </div>
         </div>
       </section>
