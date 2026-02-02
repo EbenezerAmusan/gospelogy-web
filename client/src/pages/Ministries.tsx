@@ -7,6 +7,11 @@ import { motion } from "framer-motion";
 
 import churchHero from "@assets/Gemini_Generated_Image_ljvvacljvvacljvv_1769866389407.png";
 
+const ministryImages: Record<string, string> = {
+  "Children's Ministry": "/children-ministry.jpeg",
+  "Music Ministry": "/music-ministry.jpeg",
+};
+
 export default function Ministries() {
   const { data: ministries, isLoading } = useMinistries();
 
@@ -50,7 +55,7 @@ export default function Ministries() {
                     <div className="relative rounded-3xl overflow-hidden shadow-2xl">
                       <div className="absolute inset-0 bg-primary/20 mix-blend-multiply z-10"></div>
                       <img 
-                        src={ministry.imageUrl || `https://images.unsplash.com/photo-${idx % 2 === 0 ? '1511632765486-a01980e01a18' : '1543269865-cbf427effbad'}?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80`} 
+                        src={ministryImages[ministry.name] || ministry.imageUrl || `https://images.unsplash.com/photo-${idx % 2 === 0 ? '1511632765486-a01980e01a18' : '1543269865-cbf427effbad'}?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80`} 
                         alt={ministry.name}
                         className="w-full h-[400px] object-cover hover:scale-105 transition-transform duration-700"
                       />
