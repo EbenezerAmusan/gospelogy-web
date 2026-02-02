@@ -202,15 +202,15 @@ export default function Home() {
                     <p className="text-gray-800 font-medium italic">"Thy word is a lamp unto my feet, and a light unto my path."</p>
                     <p className="text-xs text-gray-500 mt-2">— Psalm 119:105</p>
                   </div>
-                  <p className="text-gray-600">Download today's devotional or read it directly on our website.</p>
+                  <p className="text-gray-600">Access your daily devotional reading or download the full guide.</p>
                 </div>
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <button className="flex-1 py-3 border-2 border-primary text-primary font-bold rounded-xl hover:bg-primary hover:text-white transition-all">
-                    Read Online
-                  </button>
-                  <button className="flex-1 py-3 bg-gray-100 text-gray-800 font-bold rounded-xl hover:bg-gray-200 transition-all flex items-center justify-center gap-2">
-                    Download PDF
-                  </button>
+                  <Link href="/devotional" className="flex-1 py-3 border-2 border-primary text-primary font-bold rounded-xl hover:bg-primary hover:text-white transition-all text-center">
+                    Read Today's Devotional
+                  </Link>
+                  <a href="/devotional-guide-2026.pdf" download className="flex-1 py-3 bg-gray-100 text-gray-800 font-bold rounded-xl hover:bg-gray-200 transition-all flex items-center justify-center gap-2">
+                    Download Full PDF
+                  </a>
                 </div>
               </div>
 

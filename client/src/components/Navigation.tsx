@@ -47,12 +47,12 @@ export function Navigation() {
         </Link>
 
         {/* Desktop Menu */}
-        <div className="hidden md:flex space-x-8 items-center">
+        <div className="hidden lg:flex items-center gap-6">
           {links.map((link) => (
             <Link
               key={link.href}
               href={link.href}
-              className={`text-sm font-semibold tracking-wide transition-colors duration-200 relative group ${
+              className={`text-sm font-semibold tracking-wide transition-colors duration-200 relative group whitespace-nowrap ${
                 scrolled ? "text-gray-700 hover:text-primary" : "text-white/90 hover:text-white"
               }`}
             >
@@ -62,7 +62,7 @@ export function Navigation() {
           ))}
           <Link 
             href="/contact" 
-            className={`px-5 py-2.5 rounded-full font-bold text-sm transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5 ${
+            className={`px-5 py-2.5 rounded-full font-bold text-sm transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5 whitespace-nowrap ${
               scrolled 
                 ? "bg-primary text-white hover:bg-primary/90" 
                 : "bg-secondary text-primary hover:bg-white hover:text-primary"
@@ -74,7 +74,7 @@ export function Navigation() {
 
         {/* Mobile Menu Button */}
         <button
-          className={`md:hidden p-2 rounded-md ${scrolled ? "text-gray-800" : "text-white"}`}
+          className={`lg:hidden p-2 rounded-md ${scrolled ? "text-gray-800" : "text-white"}`}
           onClick={() => setIsOpen(!isOpen)}
         >
           {isOpen ? <X size={28} /> : <Menu size={28} />}
@@ -88,7 +88,7 @@ export function Navigation() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "100vh" }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden absolute top-full left-0 w-full bg-white border-t border-gray-100 shadow-xl overflow-hidden"
+            className="lg:hidden absolute top-full left-0 w-full bg-white border-t border-gray-100 shadow-xl overflow-hidden"
           >
             <div className="flex flex-col p-6 space-y-4">
               {links.map((link) => (
