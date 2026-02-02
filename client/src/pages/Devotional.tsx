@@ -212,8 +212,9 @@ export default function Devotional() {
                       </a>
                     )}
                     <a 
-                      href="/devotional-guide-2026.pdf" 
-                      download="GFC-Eden-Devotional-Guide-2026.pdf"
+                      href="https://drive.google.com/file/d/1yh7m4nL1uT7S18Rg_8a_sZqqYxs-yAyr/view?usp=drive_link" 
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="flex items-center gap-2 px-6 py-3 bg-primary text-white font-bold rounded-xl hover:bg-primary/90 transition-all" 
                       data-testid="button-download-pdf"
                     >

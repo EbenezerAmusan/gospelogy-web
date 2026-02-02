@@ -208,7 +208,7 @@ export default function Home() {
                   <Link href="/devotional" className="flex-1 py-3 border-2 border-primary text-primary font-bold rounded-xl hover:bg-primary hover:text-white transition-all text-center">
                     Read Today's Devotional
                   </Link>
-                  <a href="/devotional-guide-2026.pdf" download className="flex-1 py-3 bg-gray-100 text-gray-800 font-bold rounded-xl hover:bg-gray-200 transition-all flex items-center justify-center gap-2">
+                  <a href="https://drive.google.com/file/d/1yh7m4nL1uT7S18Rg_8a_sZqqYxs-yAyr/view?usp=drive_link" target="_blank" rel="noopener noreferrer" className="flex-1 py-3 bg-gray-100 text-gray-800 font-bold rounded-xl hover:bg-gray-200 transition-all flex items-center justify-center gap-2">
                     Download Full PDF
                   </a>
                 </div>
