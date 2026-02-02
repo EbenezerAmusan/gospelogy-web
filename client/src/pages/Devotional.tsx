@@ -58,6 +58,15 @@ const devotionals = [
   { day: 18, month: "February", title: "Set Free", scripture: "Romans 6:14", imageUrl: "/devotional-feb-18.jpeg", isImageOnly: true },
   { day: 19, month: "February", title: "Trust Him", scripture: "Matthew 6:25", imageUrl: "/devotional-feb-19.jpeg", isImageOnly: true },
   { day: 20, month: "February", title: "He Cares", scripture: "Matthew 6:31-32", imageUrl: "/devotional-feb-20.jpeg", isImageOnly: true },
+  { day: 21, month: "February", title: "Right Mindset", scripture: "Matthew 6:33", imageUrl: "/devotional-feb-21.jpeg", isImageOnly: true },
+  { day: 22, month: "February", title: "Victory Assured", scripture: "Romans 10:11", imageUrl: "/devotional-feb-22.jpeg", isImageOnly: true },
+  { day: 23, month: "February", title: "He Is Faithful", scripture: "Jonah 2:8", imageUrl: "/devotional-feb-23.jpeg", isImageOnly: true },
+  { day: 24, month: "February", title: "Don't Give Up", scripture: "Philippians 3:14", imageUrl: "/devotional-feb-24.jpeg", isImageOnly: true },
+  { day: 25, month: "February", title: "Don't Judge", scripture: "Matthew 7:1", imageUrl: "/devotional-feb-25.jpeg", isImageOnly: true },
+  { day: 26, month: "February", title: "The Law of Harvest", scripture: "Matthew 7:2", imageUrl: "/devotional-feb-26.jpeg", isImageOnly: true },
+  { day: 27, month: "February", title: "Sowing and Reaping", scripture: "Luke 5:3", imageUrl: "/devotional-feb-27.jpeg", isImageOnly: true },
+  { day: 28, month: "February", title: "Wise Investment", scripture: "John 4:7", imageUrl: "/devotional-feb-28.jpeg", isImageOnly: true },
+  { day: 29, month: "February", title: "Unbeatable Team", scripture: "Philippians 2:1-2", imageUrl: "/devotional-feb-29.jpeg", isImageOnly: true },
 ];
 
 function getTodayDevotionalIndex(): number {
