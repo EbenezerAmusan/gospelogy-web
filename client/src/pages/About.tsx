@@ -52,10 +52,9 @@ export default function About() {
             <div className="lg:w-1/2 relative">
               <div className="absolute -top-4 -left-4 w-24 h-24 bg-secondary/20 rounded-full z-0"></div>
               <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-primary/10 rounded-full z-0"></div>
-              {/* Pastor preaching or warm community moment */}
               <img 
-                src="https://images.unsplash.com/photo-1529070538774-1843cb3265df?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
-                alt="Our Community" 
+                src="/about-us.jpg" 
+                alt="Our Church Community" 
                 className="relative z-10 rounded-2xl shadow-2xl w-full"
               />
             </div>
