@@ -101,32 +101,24 @@ export default function Home() {
       <section className="py-20 bg-white">
         <div className="container-custom">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 -mt-32 relative z-30">
-            <div className="bg-primary text-white rounded-2xl shadow-xl transform hover:-translate-y-2 transition-transform duration-300 overflow-hidden">
-              <div className="h-40 overflow-hidden">
-                <img src="/sunday-service.jpeg" alt="Sunday Service" className="w-full h-full object-cover" />
+            <div className="bg-primary text-white p-8 rounded-2xl shadow-xl transform hover:-translate-y-2 transition-transform duration-300">
+              <h3 className="text-2xl font-bold mb-4 text-white">Join Us Sunday</h3>
+              <p className="mb-6 text-blue-100">Experience powerful worship and life-changing messages every week.</p>
+              <div className="flex items-center space-x-3 mb-2">
+                <Clock className="text-secondary" />
+                <span className="font-semibold text-xl">9:30 AM</span>
               </div>
-              <div className="p-6">
-                <h3 className="text-2xl font-bold mb-2 text-white">Sunday Service</h3>
-                <p className="mb-4 text-blue-100 text-sm">Experience powerful worship and life-changing messages every week.</p>
-                <div className="flex items-center space-x-3 mb-1">
-                  <Clock className="text-secondary" size={18} />
-                  <span className="font-semibold text-lg">Every Sunday at 9:30 AM</span>
-                </div>
-              </div>
+              <p className="text-sm text-blue-200">Main Sanctuary</p>
             </div>
 
-            <div className="bg-white rounded-2xl shadow-xl border border-gray-100 transform hover:-translate-y-2 transition-transform duration-300 overflow-hidden">
-              <div className="h-40 overflow-hidden">
-                <img src="/bible-study.jpeg" alt="Bible Study" className="w-full h-full object-cover" />
+            <div className="bg-white p-8 rounded-2xl shadow-xl border border-gray-100 transform hover:-translate-y-2 transition-transform duration-300">
+              <h3 className="text-2xl font-bold mb-4 text-primary">Midweek Service</h3>
+              <p className="mb-6 text-gray-600">Recharge your spirit with in-depth Bible study and prayer.</p>
+              <div className="flex items-center space-x-3 mb-2">
+                <Calendar className="text-primary" />
+                <span className="font-semibold text-xl text-gray-800">Wednesday</span>
               </div>
-              <div className="p-6">
-                <h3 className="text-2xl font-bold mb-2 text-primary">Bible Study</h3>
-                <p className="mb-4 text-gray-600 text-sm">Recharge your spirit with in-depth Bible study and prayer.</p>
-                <div className="flex items-center space-x-3 mb-1">
-                  <Calendar className="text-primary" size={18} />
-                  <span className="font-semibold text-lg text-gray-800">Every Wednesday at 5:00 PM</span>
-                </div>
-              </div>
+              <p className="text-sm text-gray-500">5:00 PM - Main Sanctuary</p>
             </div>
 
             <div className="bg-gray-50 p-8 rounded-2xl shadow-xl border border-gray-200 transform hover:-translate-y-2 transition-transform duration-300">
@@ -306,47 +298,67 @@ export default function Home() {
             </p>
           </div>
 
-          {eventsLoading ? (
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {[1, 2, 3].map(i => (
-                <div key={i} className="animate-pulse bg-gray-100 rounded-2xl h-80"></div>
-              ))}
-            </div>
-          ) : upcomingEvents && upcomingEvents.length > 0 ? (
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {upcomingEvents.map((event) => (
-                <div key={event.id} className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all border border-gray-100 hover:-translate-y-1">
-                  <div className="h-48 overflow-hidden relative">
-                    {/* Community gathering */}
-                    <img 
-                      src={event.imageUrl || "https://images.unsplash.com/photo-1511632765486-a01980e01a18?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"} 
-                      alt={event.title}
-                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                    />
-                    <div className="absolute top-4 left-4 bg-white/90 backdrop-blur rounded-lg p-2 text-center min-w-[60px] shadow-sm">
-                      <span className="block text-xs font-bold text-gray-500 uppercase">{format(new Date(event.date), "MMM")}</span>
-                      <span className="block text-2xl font-bold text-primary leading-none">{format(new Date(event.date), "dd")}</span>
-                    </div>
-                  </div>
-                  <div className="p-6">
-                    <h3 className="text-xl font-bold text-gray-900 mb-2 font-display group-hover:text-primary transition-colors">{event.title}</h3>
-                    <div className="flex items-center text-gray-500 text-sm mb-4">
-                      <MapPin size={14} className="mr-1" />
-                      {event.location}
-                    </div>
-                    <p className="text-gray-600 line-clamp-2 mb-4 text-sm">{event.description}</p>
-                    <Link href="/events" className="text-secondary font-bold text-sm uppercase tracking-wide hover:text-secondary/80">
-                      Learn More
-                    </Link>
-                  </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            {/* Sunday Service Card */}
+            <div className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all border border-gray-100 hover:-translate-y-1">
+              <div className="h-48 overflow-hidden relative">
+                <img 
+                  src="/sunday-service.jpeg" 
+                  alt="Sunday Service"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+                <div className="absolute top-4 left-4 bg-white/90 backdrop-blur rounded-lg p-2 text-center min-w-[60px] shadow-sm">
+                  <span className="block text-xs font-bold text-gray-500 uppercase">Every</span>
+                  <span className="block text-xl font-bold text-primary leading-none">SUN</span>
                 </div>
-              ))}
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-bold text-gray-900 mb-2 font-display group-hover:text-primary transition-colors">Sunday Service</h3>
+                <div className="flex items-center text-gray-500 text-sm mb-2">
+                  <Clock size={14} className="mr-1" />
+                  9:30 AM
+                </div>
+                <div className="flex items-center text-gray-500 text-sm mb-4">
+                  <MapPin size={14} className="mr-1" />
+                  Main Sanctuary
+                </div>
+                <p className="text-gray-600 line-clamp-2 mb-4 text-sm">Experience powerful worship and life-changing messages every week.</p>
+                <Link href="/events" className="text-secondary font-bold text-sm uppercase tracking-wide hover:text-secondary/80">
+                  Learn More
+                </Link>
+              </div>
             </div>
-          ) : (
-            <div className="text-center py-10">
-              <p className="text-gray-500">No upcoming events scheduled.</p>
+
+            {/* Bible Study Card */}
+            <div className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all border border-gray-100 hover:-translate-y-1">
+              <div className="h-48 overflow-hidden relative">
+                <img 
+                  src="/bible-study.jpeg" 
+                  alt="Bible Study"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+                <div className="absolute top-4 left-4 bg-white/90 backdrop-blur rounded-lg p-2 text-center min-w-[60px] shadow-sm">
+                  <span className="block text-xs font-bold text-gray-500 uppercase">Every</span>
+                  <span className="block text-xl font-bold text-primary leading-none">WED</span>
+                </div>
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-bold text-gray-900 mb-2 font-display group-hover:text-primary transition-colors">Bible Study</h3>
+                <div className="flex items-center text-gray-500 text-sm mb-2">
+                  <Clock size={14} className="mr-1" />
+                  5:00 PM
+                </div>
+                <div className="flex items-center text-gray-500 text-sm mb-4">
+                  <MapPin size={14} className="mr-1" />
+                  Main Sanctuary
+                </div>
+                <p className="text-gray-600 line-clamp-2 mb-4 text-sm">Recharge your spirit with in-depth Bible study and prayer.</p>
+                <Link href="/events" className="text-secondary font-bold text-sm uppercase tracking-wide hover:text-secondary/80">
+                  Learn More
+                </Link>
+              </div>
             </div>
-          )}
+          </div>
 
           <div className="mt-12 text-center">
             <Link href="/events" className="inline-block px-8 py-3 border-2 border-primary text-primary font-bold rounded-full hover:bg-primary hover:text-white transition-all">
