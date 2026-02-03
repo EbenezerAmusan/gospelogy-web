@@ -11,7 +11,7 @@ const ministries = [
     id: 1,
     name: "Children's Ministry",
     description: "Our Children's Ministry is dedicated to nurturing the faith of our youngest members. Through engaging Bible lessons, fun activities, and a loving environment, we help children discover God's love and build a strong foundation in Christ. Every child is valued and encouraged to grow spiritually.",
-    leader: "Sister Grace",
+    leader: "Pastor Calista",
     meetingTime: "Sundays during service",
     imageUrl: "/children-ministry.jpeg"
   },
@@ -19,7 +19,7 @@ const ministries = [
     id: 2,
     name: "Music Ministry",
     description: "The Music Ministry leads our congregation in worship through song and praise. Our talented team of singers and musicians are dedicated to creating an atmosphere where the Holy Spirit can move freely. Whether through traditional hymns or contemporary worship, we aim to glorify God and inspire hearts.",
-    leader: "Brother David",
+    leader: "Brother Michael",
     meetingTime: "Thursdays at 6:00 PM (Rehearsals)",
     imageUrl: "/music-ministry.jpeg"
   },
@@ -27,7 +27,7 @@ const ministries = [
     id: 3,
     name: "Youth Ministry",
     description: "Our Youth Ministry provides a safe and vibrant space for teenagers and young adults to explore their faith, build lasting friendships, and develop leadership skills. Through Bible studies, outreach programs, and fellowship activities, we empower the next generation to live boldly for Christ.",
-    leader: "Brother Emmanuel",
+    leader: "Brother John",
     meetingTime: "Saturdays at 4:00 PM",
     imageUrl: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
   },
@@ -35,7 +35,7 @@ const ministries = [
     id: 4,
     name: "Women's Fellowship",
     description: "The Women's Fellowship is a ministry dedicated to strengthening, encouraging, and equipping women to fulfill their God-given purpose. Through prayer meetings, Bible studies, and outreach initiatives, we support one another in our walk with Christ and make a difference in our community.",
-    leader: "Deaconess Comfort",
+    leader: "Sister Mercy",
     meetingTime: "First Saturday of every month",
     imageUrl: "https://images.unsplash.com/photo-1609234656388-0ff363383899?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
   },
@@ -43,7 +43,7 @@ const ministries = [
     id: 5,
     name: "Men's Fellowship",
     description: "The Men's Fellowship provides a brotherhood where men can grow in faith, support one another, and become the spiritual leaders God has called them to be. Through Bible studies, prayer, and community service, we strengthen families and build godly character.",
-    leader: "Brother John",
+    leader: "Pastor Isaac",
     meetingTime: "Last Saturday of every month",
     imageUrl: "https://images.unsplash.com/photo-1491438590914-bc09fcaaf77a?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
   },
