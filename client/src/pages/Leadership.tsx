@@ -2,40 +2,36 @@ import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { PageHeader } from "@/components/PageHeader";
 import { motion } from "framer-motion";
-import { Mail, Phone } from "lucide-react";
+import { Mail, User } from "lucide-react";
 import churchHero from "@assets/Gemini_Generated_Image_ljvvacljvvacljvv_1769866389407.png";
-import pastorAphaImg from "@assets/Pastor_Apha_1769987324425.jpg";
-import pastorLilianImg from "@assets/Pastor_Mrs._Lilian_(2)_1769987324428.jpg";
-import pastorCalistaImg from "@assets/Pastor_Calista_1769987324427.jpg";
-import pastorBerryImg from "@assets/Pastor_Berry_1769987324426.jpg";
 
 const leaders = [
   {
     name: "Pastor Perez Apha",
     role: "Senior Pastor",
     description: "Pastor Perez Apha is the visionary leader of God's Family Church. With a heart for discipleship and spiritual growth, he leads the congregation with wisdom, love, and a deep commitment to the Gospel.",
-    image: pastorAphaImg,
+    initials: "PA",
     featured: true
   },
   {
     name: "Pastor Mrs. Lilian Apha",
     role: "Associate Pastor",
     description: "Pastor Mrs. Lilian Apha serves alongside the Senior Pastor, providing spiritual guidance and pastoral care to the congregation with warmth and dedication.",
-    image: pastorLilianImg,
+    initials: "LA",
     featured: false
   },
   {
     name: "Pastor Calista",
     role: "Children's Ministry Leader",
     description: "Pastor Calista oversees the Children's Ministry, nurturing young hearts in the ways of the Lord with creativity, patience, and genuine love for the next generation.",
-    image: pastorCalistaImg,
+    initials: "PC",
     featured: false
   },
   {
     name: "Pastor Berry",
     role: "Ministry Leader",
     description: "Pastor Berry serves faithfully in ministry, contributing to the spiritual growth and development of the church family.",
-    image: pastorBerryImg,
+    initials: "PB",
     featured: false
   }
 ];
@@ -68,11 +64,9 @@ export default function Leadership() {
                 <div className="lg:w-2/5">
                   <div className="relative">
                     <div className="absolute -top-4 -left-4 w-full h-full bg-secondary/20 rounded-3xl" />
-                    <img 
-                      src={seniorPastor.image}
-                      alt={seniorPastor.name}
-                      className="relative z-10 w-full max-w-sm mx-auto rounded-3xl shadow-2xl object-cover aspect-[3/4]"
-                    />
+                    <div className="relative z-10 w-full max-w-sm mx-auto rounded-3xl shadow-2xl aspect-[3/4] bg-gradient-to-br from-primary to-primary/80 flex items-center justify-center">
+                      <span className="text-8xl font-bold text-white/90">{seniorPastor.initials}</span>
+                    </div>
                   </div>
                 </div>
                 <div className="lg:w-3/5 text-center lg:text-left">
@@ -106,12 +100,8 @@ export default function Leadership() {
                 transition={{ delay: idx * 0.1 }}
                 className="bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 hover:shadow-xl transition-all group"
               >
-                <div className="h-80 overflow-hidden">
-                  <img 
-                    src={leader.image}
-                    alt={leader.name}
-                    className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-110"
-                  />
+                <div className="h-64 overflow-hidden bg-gradient-to-br from-primary/80 to-primary flex items-center justify-center">
+                  <span className="text-6xl font-bold text-white/90">{leader.initials}</span>
                 </div>
                 <div className="p-6 text-center">
                   <span className="text-secondary font-bold text-sm uppercase tracking-wider">{leader.role}</span>
